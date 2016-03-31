@@ -1,0 +1,51 @@
+
+/* Class = "UILabel"; text = "Ability"; ObjectID = "0Ca-Bf-heu"; */
+"0Ca-Bf-heu.text" = "Ability";
+
+/* Class = "UILabel"; text = "Mod"; ObjectID = "18o-qQ-53G"; */
+"18o-qQ-53G.text" = "Mod";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "A6T-gP-hr0"; */
+"A6T-gP-hr0.text" = "10";
+
+/* Class = "UILabel"; text = "Points"; ObjectID = "Dp5-Q1-iTL"; */
+"Dp5-Q1-iTL.text" = "Points";
+
+/* Class = "UILabel"; text = "Total Points :"; ObjectID = "GK8-R8-gDV"; */
+"GK8-R8-gDV.text" = "Total Points :";
+
+/* Class = "UILabel"; text = "Actual"; ObjectID = "IVp-Ef-vMR"; */
+"IVp-Ef-vMR.text" = "Actual";
+
+/* Class = "UILabel"; text = "Number of points to spend "; ObjectID = "LfF-k3-x5o"; */
+"LfF-k3-x5o.text" = "Number of points to spend ";
+
+/* Class = "UISegmentedControl"; OKn-Yx-Gcq.segmentTitles[0] = "10"; ObjectID = "OKn-Yx-Gcq"; */
+"OKn-Yx-Gcq.segmentTitles[0]" = "10";
+
+/* Class = "UISegmentedControl"; OKn-Yx-Gcq.segmentTitles[1] = "15"; ObjectID = "OKn-Yx-Gcq"; */
+"OKn-Yx-Gcq.segmentTitles[1]" = "15";
+
+/* Class = "UISegmentedControl"; OKn-Yx-Gcq.segmentTitles[2] = "20"; ObjectID = "OKn-Yx-Gcq"; */
+"OKn-Yx-Gcq.segmentTitles[2]" = "20";
+
+/* Class = "UISegmentedControl"; OKn-Yx-Gcq.segmentTitles[3] = "25"; ObjectID = "OKn-Yx-Gcq"; */
+"OKn-Yx-Gcq.segmentTitles[3]" = "25";
+
+/* Class = "UILabel"; text = "Racial Trait"; ObjectID = "TlZ-iR-ael"; */
+"TlZ-iR-ael.text" = "Racial Trait";
+
+/* Class = "UILabel"; text = "Force"; ObjectID = "XEa-FJ-FIG"; */
+"XEa-FJ-FIG.text" = "Force";
+
+/* Class = "UILabel"; text = "Ability Score Calculator"; ObjectID = "bGJ-oZ-yl1"; */
+"bGJ-oZ-yl1.text" = "Ability Score Calculator";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "hDq-F2-oIA"; */
+"hDq-F2-oIA.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "jpC-uB-GQK"; */
+"jpC-uB-GQK.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "pLg-b9-f3l"; */
+"pLg-b9-f3l.text" = "0";
