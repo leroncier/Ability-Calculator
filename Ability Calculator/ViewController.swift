@@ -37,12 +37,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var stepper: UIStepper!
     @IBAction func stepperForce(sender: UIStepper) {
         basicForce.text = "\(Int(stepper.value))"
-        totalPoints.text = "\(Int(totalPoints.text)! + 1)"
+      //  totalPoints.text = "\(Int(totalPoints.text)! + 1)"
         print(totalPoints.text)
     }
+    @IBOutlet weak var basicDexterity: UITextField!
+    
     
     var pickerRaces: [String] = ["Human", "Dwarf", "Elf", "Gnome", "Half-elf", "Half-orc", "Halfing", "Other"]
     var picker = UIPickerView()
+    
+    var basicAbilities: [String] = ["7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"]
+    var pickerPoints = UIPickerView()
+    
+    let abilityCosts:[Int:Int] = [7:-4, 8:-2, 9:-1, 10:0, 11:1, 12:12, 13:13, 14:5, 15:7, 16:10, 17:13, 18:17]
+   // let abilityMods:[int:Int] = []
     
     override func viewDidLoad() {
         
@@ -53,15 +61,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Picker View        
         
         race.delegate = self
-
         race.inputView = picker
+        
+        basicDexterity.delegate = self
+        basicDexterity.inputView = pickerPoints
         
         // Connect data:
         picker.dataSource = self
         picker.delegate = self
         
+        pickerPoints.dataSource = self
+        pickerPoints.delegate = self
+        
         // Input data from the Array
         race.text = pickerRaces[0]
+        basicDexterity.text = basicAbilities[3]
         
         // Display number of total points by default
         totalPoints.text = "15"
@@ -75,18 +89,39 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // Row count: rows equals array length.
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+           if pickerView == picker {
             return pickerRaces.count
+        } else if pickerView == pickerPoints {
+            return basicAbilities.count
+        }
+        return 1
+        
     }
     
     // Return a string from the array for this row.
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if pickerView == picker {
             return pickerRaces[row]
+        } else if pickerView == pickerPoints {
+            return basicAbilities[row]
+        }
+        return ""
         
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        race.text = pickerRaces[row]
-        self.view.endEditing(true)
+        
+        if pickerView == picker {
+            race.text = pickerRaces[row]
+            self.view.endEditing(true)
+
+        } else if pickerView == pickerPoints {
+            basicDexterity.text = basicAbilities[row]
+            self.view.endEditing(true)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,6 +129,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
 
+    
 
 }
 
